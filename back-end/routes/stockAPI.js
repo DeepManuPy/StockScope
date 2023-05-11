@@ -42,7 +42,7 @@ router.route("/:name").get(async (req, res) => {
 
     //If the data is not present in the redis cache fetch the data from the api
     let { data } = await axios.get(
-      `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stockName}&apikey=${"CG1R8C3YO1K5CFYX"}`
+      `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stockName}&apikey=${"QDFLHCC4YLVS6SDL"}`
     );
 
     //If the data is not present we will throw 404 along with data not found message
@@ -164,7 +164,7 @@ router.route("/income-statement/:name").get(async (req, res) => {
 
     //If the data is not present in the redis cache fetch the data from the api
     let { data } = await axios.get(
-      `https://www.alphavantage.co/query?function=INCOME_STATEMENT&symbol=${stockName}&apikey=${"CG1R8C3YO1K5CFYX"}`
+      `https://www.alphavantage.co/query?function=INCOME_STATEMENT&symbol=${stockName}&apikey=${"QDFLHCC4YLVS6SDL"}`
     );
 
     //If the data is not present we will throw 404 along with data not found message
@@ -241,7 +241,7 @@ router.route("/balance-sheet/:name").get(async (req, res) => {
 
     //If the data is not present in the redis cache fetch the data from the api
     let { data } = await axios.get(
-      `https://www.alphavantage.co/query?function=BALANCE_SHEET&symbol=${stockName}&apikey=${"CG1R8C3YO1K5CFYX"}`
+      `https://www.alphavantage.co/query?function=BALANCE_SHEET&symbol=${stockName}&apikey=${"QDFLHCC4YLVS6SDL"}`
     );
 
     //If the data is not present we will throw 404 along with data not found message
@@ -318,7 +318,7 @@ router.route("/cash-flow/:name").get(async (req, res) => {
 
     //If the data is not present in the redis cache fetch the data from the api
     let { data } = await axios.get(
-      `https://www.alphavantage.co/query?function=CASH_FLOW&symbol=${stockName}&apikey=${"CG1R8C3YO1K5CFYX"}`
+      `https://www.alphavantage.co/query?function=CASH_FLOW&symbol=${stockName}&apikey=${"QDFLHCC4YLVS6SDL"}`
     );
 
     //If the data is not present we will throw 404 along with data not found message

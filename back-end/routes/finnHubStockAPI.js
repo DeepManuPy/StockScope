@@ -18,7 +18,7 @@ client
   .catch((err) => console.error(err));
 
 //cause dotenv isnt working for some reason.
-const finnhubApiKey = "cgvbft1r01qqk0dog72gcgvbft1r01qqk0dog730";
+const finnhubApiKey = "che73vpr01qi6ghk0e00che73vpr01qi6ghk0e0g";
 
 router.route("/:symbol/:resolution/:from/:to").get(async (req, res) => {
   let stockData;

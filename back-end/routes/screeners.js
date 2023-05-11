@@ -47,7 +47,7 @@ const getStockHistoricalData = async (symbol) => {
     ).getTime() / 1000;
 
   let { data } = await axios.request(
-    `https://api.twelvedata.com/time_series?apikey=${"361ea598e14f435d815239dcd4cd5115"}&symbol=${symbol}&interval=5min&outputsize=5000`
+    `https://api.twelvedata.com/time_series?apikey=${"29666ab9a80f4e13abc458eb39b9bfbb"}&symbol=${symbol}&interval=5min&outputsize=5000`
   );
 
   //If the data is not present we will throw 404 along with data not found message
@@ -95,7 +95,7 @@ router.route("/trending-stocks").get(async (req, res) => {
       url: "https://yahoo-finance15.p.rapidapi.com/api/yahoo/co/collections/most_actives",
       params: { start: "0" },
       headers: {
-        "X-RapidAPI-Key": "664c7d5051msh83f2271d33d8054p196cb4jsnbab4df211825",
+        "X-RapidAPI-Key": "fb457edb08msh9c4a78bdcc231bap1a03aajsn4587d56ef274",
         "X-RapidAPI-Host": "yahoo-finance15.p.rapidapi.com",
       },
     };
@@ -160,7 +160,7 @@ router.route("/top-gainers").get(async (req, res) => {
       url: "https://yahoo-finance15.p.rapidapi.com/api/yahoo/co/collections/day_gainers",
       params: { start: "0" },
       headers: {
-        "X-RapidAPI-Key": "664c7d5051msh83f2271d33d8054p196cb4jsnbab4df211825",
+        "X-RapidAPI-Key": "fb457edb08msh9c4a78bdcc231bap1a03aajsn4587d56ef274",
         "X-RapidAPI-Host": "yahoo-finance15.p.rapidapi.com",
       },
     };
@@ -219,7 +219,7 @@ router.route("/general-news").get(async (req, res) => {
     }
 
     let { data } = await axios.get(
-      `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&apikey=${"CG1R8C3YO1K5CFYX"}`
+      `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&apikey=${"QDFLHCC4YLVS6SDL"}`
     );
 
     //If the data is not present we will throw 404 along with data not found message
@@ -308,7 +308,7 @@ router.route("/news/:query").get(async (req, res) => {
     //     },
     //     headers: {
     //         'X-BingApis-SDK': 'true',
-    //         'X-RapidAPI-Key': "664c7d5051msh83f2271d33d8054p196cb4jsnbab4df211825",
+    //         'X-RapidAPI-Key': "fb457edb08msh9c4a78bdcc231bap1a03aajsn4587d56ef274",
     //         'X-RapidAPI-Host': "bing-news-search1.p.rapidapi.com"
     //     }
     // };
@@ -319,7 +319,7 @@ router.route("/news/:query").get(async (req, res) => {
         headers: {
           "X-BingApis-SDK": "true",
           "X-RapidAPI-Key":
-            "664c7d5051msh83f2271d33d8054p196cb4jsnbab4df211825",
+            "fb457edb08msh9c4a78bdcc231bap1a03aajsn4587d56ef274",
           "X-RapidAPI-Host": "bing-news-search1.p.rapidapi.com",
         },
       }
